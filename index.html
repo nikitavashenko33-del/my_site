@@ -2,12 +2,190 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой сайт</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: #94a3b8;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #7dd3fc;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0 30px;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>Привет! 👋</h1>
-    <p>Это мой первый сайт!</p>
+<div class="container">
+
+    <header>
+        <div class="logo">MY SITE</div>
+
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#projects">Проекты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Привет, я <span>Никита</span> 👋</h1>
+
+        <p>
+            Добро пожаловать на мой первый сайт.
+            Я изучаю создание сайтов и программирование.
+        </p>
+
+        <a class="button"
+           href="https://github.com/nikitavashenko33-del"
+           target="_blank">
+            Мой GitHub
+        </a>
+    </section>
+
+    <section id="about" class="cards">
+
+        <div class="card">
+            <h3>💻 Код</h3>
+            <p>
+                Изучаю HTML, CSS и другие технологии.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Проекты</h3>
+            <p>
+                Создаю свои первые проекты и сайты.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>🎯 Цель</h3>
+            <p>
+                Научиться создавать крутые вещи самостоятельно.
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Никита. Сделано своими руками ❤️
+    </footer>
+
+</div>
 
 </body>
 </html>
